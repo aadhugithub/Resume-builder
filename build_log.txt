@@ -1,0 +1,2278 @@
+﻿
+> resume-web@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.1 (Turbopack)
+
+  Creating an optimized production build ...
+node.exe : 
+At line:1 char:1
++ & "C:\Program Fil
+es\nodejs/node.exe"
+ "C:\Users\hp\AppDa
+ta\Roaming\npm ...
++ ~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
+    + CategoryInfo 
+             : No  
+  tSpecified: (:   
+ String) [], Re    
+moteException
+    + FullyQualifi 
+   edErrorId : Na  
+  tiveCommandErr   
+ or
+ 
+> Build error 
+occurred
+Error: Turbopack 
+build failed with 
+12 errors:
+./src/components/bu
+ilder/forms/SkillsF
+orm.jsx:12:1
+Module not found: 
+Can't resolve '@/co
+mponents/ui/badge'
+[0m [90m 10 
+|[39m 
+[36mimport[39m { 
+[33mDialog[39m[3
+3m,[39m [33mDialo
+gContent[39m[33m,
+[39m [33mDialogHe
+ader[39m[33m,[39
+m [33mDialogTitle
+[39m[33m,[39m [3
+3mDialogFooter[39m
+ } [36mfrom[39m 
+[32m"@/components/u
+i/dialog"[39m[33m
+;[39m
+ [90m 11 |[39m 
+[36mimport[39m { 
+[33mCard[39m[33m
+,[39m [33mCardCon
+tent[39m } 
+[36mfrom[39m [32
+m"@/components/ui/c
+ard"[39m[33m;[39
+m
+[31m[1m>[22m[39
+m[90m 12 |[39m 
+[36mimport[39m { 
+[33mBadge[39m } 
+[36mfrom[39m [32
+m"@/components/ui/b
+adge"[39m[33m;[3
+9m
+ [90m    |[39m [
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m
+ [90m 13 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mSkillsForm[39
+m() {
+ [90m 14 |[39m   
+[36mconst[39m $ 
+[33m=[39m _c([35
+m38[39m)[33m;[39
+m
+ [90m 15 |[39m   
+[36mconst[39m 
+{[0m
+
+Import map: 
+aliased to 
+relative './src/com
+ponents/ui/badge' 
+inside of 
+[project]/
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/builder/forms/Ski
+llsForm.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component Browser]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/component
+s/builder/forms/Ski
+llsForm.jsx 
+[Client Component 
+SSR]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component SSR]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/bu
+ilder/forms/SkillsF
+orm.jsx:17:1
+Module not found: 
+Can't resolve '@/co
+mponents/ui/badge'
+[0m [90m 15 
+|[39m } 
+[36mfrom[39m [32
+m"@/components/ui/d
+ialog"[39m[33m;[
+39m
+ [90m 16 |[39m 
+[36mimport[39m { 
+[33mCard[39m[33m
+,[39m [33mCardCon
+tent[39m } 
+[36mfrom[39m [32
+m"@/components/ui/c
+ard"[39m[33m;[39
+m
+[31m[1m>[22m[39
+m[90m 17 |[39m 
+[36mimport[39m { 
+[33mBadge[39m } 
+[36mfrom[39m [32
+m"@/components/ui/b
+adge"[39m[33m;[3
+9m
+ [90m    |[39m [
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m
+ [90m 18 |[39m
+ [90m 19 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mSkillsForm[39
+m() {
+ [90m 20 |[39m   
+  [36mconst[39m 
+{ 
+resume[33m,[39m 
+dispatch } 
+[33m=[39m useResu
+me()[33m;[39m[0m
+
+Import map: 
+aliased to 
+relative './src/com
+ponents/ui/badge' 
+inside of 
+[project]/
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/builder/forms/Ski
+llsForm.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component Browser]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/component
+s/builder/forms/Ski
+llsForm.jsx 
+[Client Component 
+SSR]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component SSR]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/bu
+ilder/forms/DesignF
+orm.jsx:7:1
+Module not found: 
+Can't resolve '@/co
+mponents/ui/radio-g
+roup'
+[0m [90m  5 
+|[39m 
+[36mimport[39m { 
+useResume } 
+[36mfrom[39m [32
+m"@/lib/resume-stor
+e"[39m[33m;[39m
+ [90m  6 |[39m 
+[36mimport[39m { 
+[33mLabel[39m } 
+[36mfrom[39m [32
+m"@/components/ui/l
+abel"[39m[33m;[3
+9m
+[31m[1m>[22m[39
+m[90m  7 |[39m 
+[36mimport[39m { 
+[33mRadioGroup[39
+m[33m,[39m [33mR
+adioGroupItem[39m 
+} [36mfrom[39m [
+32m"@/components/ui
+/radio-group"[39m
+[33m;[39m
+ [90m    |[39m [
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m
+ [90m  8 |[39m 
+[36mimport[39m { 
+[33mSelect[39m[3
+3m,[39m [33mSelec
+tContent[39m[33m,
+[39m [33mSelectIt
+em[39m[33m,[39m 
+[33mSelectTrigger
+[39m[33m,[39m [3
+3mSelectValue[39m 
+} [36mfrom[39m [
+32m"@/components/ui
+/select"[39m[33m;
+[39m
+ [90m  9 |[39m 
+[36mimport[39m { 
+[33mSlider[39m } 
+[36mfrom[39m [32
+m"@/components/ui/s
+lider"[39m[33m;[
+39m
+ [90m 10 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mDesignForm[39
+m() {[0m
+
+Import map: 
+aliased to 
+relative './src/com
+ponents/ui/radio-gr
+oup' inside of 
+[project]/
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/builder/forms/Des
+ignForm.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component Browser]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/component
+s/builder/forms/Des
+ignForm.jsx 
+[Client Component 
+SSR]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component SSR]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/bu
+ilder/forms/DesignF
+orm.jsx:6:1
+Module not found: 
+Can't resolve '@/co
+mponents/ui/radio-g
+roup'
+[0m [90m 4 
+|[39m 
+[36mimport[39m { 
+useResume } 
+[36mfrom[39m [32
+m"@/lib/resume-stor
+e"[39m[33m;[39m
+ [90m 5 |[39m 
+[36mimport[39m { 
+[33mLabel[39m } 
+[36mfrom[39m [32
+m"@/components/ui/l
+abel"[39m[33m;[3
+9m
+[31m[1m>[22m[39
+m[90m 6 |[39m 
+[36mimport[39m { 
+[33mRadioGroup[39
+m[33m,[39m [33mR
+adioGroupItem[39m 
+} [36mfrom[39m [
+32m"@/components/ui
+/radio-group"[39m
+[33m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m
+ [90m 7 |[39m 
+[36mimport[39m { 
+[33mSelect[39m[3
+3m,[39m [33mSelec
+tContent[39m[33m,
+[39m [33mSelectIt
+em[39m[33m,[39m 
+[33mSelectTrigger
+[39m[33m,[39m [3
+3mSelectValue[39m 
+} [36mfrom[39m [
+32m"@/components/ui
+/select"[39m[33m;
+[39m
+ [90m 8 |[39m 
+[36mimport[39m { 
+[33mSlider[39m } 
+[36mfrom[39m [32
+m"@/components/ui/s
+lider"[39m[33m;[
+39m
+ [90m 9 |[39m[0m
+
+Import map: 
+aliased to 
+relative './src/com
+ponents/ui/radio-gr
+oup' inside of 
+[project]/
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/builder/forms/Des
+ignForm.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component Browser]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/component
+s/builder/forms/Des
+ignForm.jsx 
+[Client Component 
+SSR]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component SSR]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/bu
+ilder/forms/DesignF
+orm.jsx:8:1
+Module not found: 
+Can't resolve '@/co
+mponents/ui/select'
+[0m [90m  6 
+|[39m 
+[36mimport[39m { 
+[33mLabel[39m } 
+[36mfrom[39m [32
+m"@/components/ui/l
+abel"[39m[33m;[3
+9m
+ [90m  7 |[39m 
+[36mimport[39m { 
+[33mRadioGroup[39
+m[33m,[39m [33mR
+adioGroupItem[39m 
+} [36mfrom[39m [
+32m"@/components/ui
+/radio-group"[39m
+[33m;[39m
+[31m[1m>[22m[39
+m[90m  8 |[39m 
+[36mimport[39m { 
+[33mSelect[39m[3
+3m,[39m [33mSelec
+tContent[39m[33m,
+[39m [33mSelectIt
+em[39m[33m,[39m 
+[33mSelectTrigger
+[39m[33m,[39m [3
+3mSelectValue[39m 
+} [36mfrom[39m [
+32m"@/components/ui
+/select"[39m[33m;
+[39m
+ [90m    |[39m [
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m
+ [90m  9 |[39m 
+[36mimport[39m { 
+[33mSlider[39m } 
+[36mfrom[39m [32
+m"@/components/ui/s
+lider"[39m[33m;[
+39m
+ [90m 10 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mDesignForm[39
+m() {
+ [90m 11 |[39m   
+[36mconst[39m $ 
+[33m=[39m _c([35
+m49[39m)[33m;[39
+m[0m
+
+Import map: 
+aliased to 
+relative './src/com
+ponents/ui/select' 
+inside of 
+[project]/
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/builder/forms/Des
+ignForm.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component Browser]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/component
+s/builder/forms/Des
+ignForm.jsx 
+[Client Component 
+SSR]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component SSR]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/bu
+ilder/forms/DesignF
+orm.jsx:7:1
+Module not found: 
+Can't resolve '@/co
+mponents/ui/select'
+[0m [90m  5 
+|[39m 
+[36mimport[39m { 
+[33mLabel[39m } 
+[36mfrom[39m [32
+m"@/components/ui/l
+abel"[39m[33m;[3
+9m
+ [90m  6 |[39m 
+[36mimport[39m { 
+[33mRadioGroup[39
+m[33m,[39m [33mR
+adioGroupItem[39m 
+} [36mfrom[39m [
+32m"@/components/ui
+/radio-group"[39m
+[33m;[39m
+[31m[1m>[22m[39
+m[90m  7 |[39m 
+[36mimport[39m { 
+[33mSelect[39m[3
+3m,[39m [33mSelec
+tContent[39m[33m,
+[39m [33mSelectIt
+em[39m[33m,[39m 
+[33mSelectTrigger
+[39m[33m,[39m [3
+3mSelectValue[39m 
+} [36mfrom[39m [
+32m"@/components/ui
+/select"[39m[33m;
+[39m
+ [90m    |[39m [
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m
+ [90m  8 |[39m 
+[36mimport[39m { 
+[33mSlider[39m } 
+[36mfrom[39m [32
+m"@/components/ui/s
+lider"[39m[33m;[
+39m
+ [90m  9 |[39m
+ [90m 10 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mDesignForm[39
+m() {[0m
+
+Import map: 
+aliased to 
+relative './src/com
+ponents/ui/select' 
+inside of 
+[project]/
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/builder/forms/Des
+ignForm.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component Browser]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/component
+s/builder/forms/Des
+ignForm.jsx 
+[Client Component 
+SSR]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component SSR]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/bu
+ilder/forms/Educati
+onForm.jsx:9:1
+Module not found: 
+Can't resolve '@/co
+mponents/ui/textare
+a'
+[0m [90m  7 
+|[39m 
+[36mimport[39m { 
+[33mInput[39m } 
+[36mfrom[39m [32
+m"@/components/ui/i
+nput"[39m[33m;[3
+9m
+ [90m  8 |[39m 
+[36mimport[39m { 
+[33mLabel[39m } 
+[36mfrom[39m [32
+m"@/components/ui/l
+abel"[39m[33m;[3
+9m
+[31m[1m>[22m[39
+m[90m  9 |[39m 
+[36mimport[39m { 
+[33mTextarea[39m 
+} [36mfrom[39m [
+32m"@/components/ui
+/textarea"[39m[33
+m;[39m
+ [90m    |[39m [
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m
+ [90m 10 |[39m 
+[36mimport[39m { 
+[33mPlus[39m[33m
+,[39m [33mPencil
+[39m[33m,[39m [3
+3mTrash2[39m[33m,
+[39m [33mGripVert
+ical[39m } 
+[36mfrom[39m [32
+m"lucide-react"[39
+m[33m;[39m
+ [90m 11 |[39m 
+[36mimport[39m { 
+[33mSheet[39m[33
+m,[39m [33mSheetC
+ontent[39m[33m,[
+39m [33mSheetDescr
+iption[39m[33m,[
+39m [33mSheetHeade
+r[39m[33m,[39m 
+[33mSheetTitle[39m
+[33m,[39m [33mSh
+eetTrigger[39m[33
+m,[39m [33mSheetF
+ooter[39m[33m,[3
+9m [33mSheetClose
+[39m } 
+[36mfrom[39m [32
+m"@/components/ui/s
+heet"[39m[33m;[3
+9m
+ [90m 12 |[39m 
+[36mimport[39m { 
+[33mCard[39m[33m
+,[39m [33mCardCon
+tent[39m } 
+[36mfrom[39m [32
+m"@/components/ui/c
+ard"[39m[33m;[39
+m[0m
+
+Import map: 
+aliased to 
+relative './src/com
+ponents/ui/textarea
+' inside of 
+[project]/
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/builder/forms/Edu
+cationForm.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component Browser]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/component
+s/builder/forms/Edu
+cationForm.jsx 
+[Client Component 
+SSR]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component SSR]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/bu
+ilder/forms/Educati
+onForm.jsx:8:1
+Module not found: 
+Can't resolve '@/co
+mponents/ui/textare
+a'
+[0m [90m  6 
+|[39m 
+[36mimport[39m { 
+[33mInput[39m } 
+[36mfrom[39m [32
+m"@/components/ui/i
+nput"[39m[33m;[3
+9m
+ [90m  7 |[39m 
+[36mimport[39m { 
+[33mLabel[39m } 
+[36mfrom[39m [32
+m"@/components/ui/l
+abel"[39m[33m;[3
+9m
+[31m[1m>[22m[39
+m[90m  8 |[39m 
+[36mimport[39m { 
+[33mTextarea[39m 
+} [36mfrom[39m [
+32m"@/components/ui
+/textarea"[39m[33
+m;[39m
+ [90m    |[39m [
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m
+ [90m  9 |[39m 
+[36mimport[39m { 
+[33mPlus[39m[33m
+,[39m [33mPencil
+[39m[33m,[39m [3
+3mTrash2[39m[33m,
+[39m [33mGripVert
+ical[39m } 
+[36mfrom[39m [32
+m"lucide-react"[39
+m[33m;[39m
+ [90m 10 |[39m 
+[36mimport[39m {
+ [90m 11 |[39m   
+  [33mSheet[39m[
+33m,[39m[0m
+
+Import map: 
+aliased to 
+relative './src/com
+ponents/ui/textarea
+' inside of 
+[project]/
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/builder/forms/Edu
+cationForm.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component Browser]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/component
+s/builder/forms/Edu
+cationForm.jsx 
+[Client Component 
+SSR]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component SSR]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/bu
+ilder/forms/Experie
+nceForm.jsx:9:1
+Module not found: 
+Can't resolve '@/co
+mponents/ui/textare
+a'
+[0m [90m  7 
+|[39m 
+[36mimport[39m { 
+[33mInput[39m } 
+[36mfrom[39m [32
+m"@/components/ui/i
+nput"[39m[33m;[3
+9m
+ [90m  8 |[39m 
+[36mimport[39m { 
+[33mLabel[39m } 
+[36mfrom[39m [32
+m"@/components/ui/l
+abel"[39m[33m;[3
+9m
+[31m[1m>[22m[39
+m[90m  9 |[39m 
+[36mimport[39m { 
+[33mTextarea[39m 
+} [36mfrom[39m [
+32m"@/components/ui
+/textarea"[39m[33
+m;[39m
+ [90m    |[39m [
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m
+ [90m 10 |[39m 
+[36mimport[39m { 
+[33mPlus[39m[33m
+,[39m [33mPencil
+[39m[33m,[39m [3
+3mTrash2[39m[33m,
+[39m [33mGripVert
+ical[39m } 
+[36mfrom[39m [32
+m"lucide-react"[39
+m[33m;[39m
+ [90m 11 |[39m 
+[36mimport[39m { 
+[33mSheet[39m[33
+m,[39m [33mSheetC
+ontent[39m[33m,[
+39m [33mSheetDescr
+iption[39m[33m,[
+39m [33mSheetHeade
+r[39m[33m,[39m 
+[33mSheetTitle[39m
+[33m,[39m [33mSh
+eetTrigger[39m[33
+m,[39m [33mSheetF
+ooter[39m[33m,[3
+9m [33mSheetClose
+[39m } 
+[36mfrom[39m [32
+m"@/components/ui/s
+heet"[39m[33m;[3
+9m
+ [90m 12 |[39m 
+[36mimport[39m { 
+[33mCard[39m[33m
+,[39m [33mCardCon
+tent[39m } 
+[36mfrom[39m [32
+m"@/components/ui/c
+ard"[39m[33m;[39
+m[0m
+
+Import map: 
+aliased to 
+relative './src/com
+ponents/ui/textarea
+' inside of 
+[project]/
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/builder/forms/Exp
+erienceForm.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component Browser]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/component
+s/builder/forms/Exp
+erienceForm.jsx 
+[Client Component 
+SSR]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component SSR]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/bu
+ilder/forms/Experie
+nceForm.jsx:8:1
+Module not found: 
+Can't resolve '@/co
+mponents/ui/textare
+a'
+[0m [90m  6 
+|[39m 
+[36mimport[39m { 
+[33mInput[39m } 
+[36mfrom[39m [32
+m"@/components/ui/i
+nput"[39m[33m;[3
+9m
+ [90m  7 |[39m 
+[36mimport[39m { 
+[33mLabel[39m } 
+[36mfrom[39m [32
+m"@/components/ui/l
+abel"[39m[33m;[3
+9m
+[31m[1m>[22m[39
+m[90m  8 |[39m 
+[36mimport[39m { 
+[33mTextarea[39m 
+} [36mfrom[39m [
+32m"@/components/ui
+/textarea"[39m[33
+m;[39m
+ [90m    |[39m [
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m
+ [90m  9 |[39m 
+[36mimport[39m { 
+[33mPlus[39m[33m
+,[39m [33mPencil
+[39m[33m,[39m [3
+3mTrash2[39m[33m,
+[39m [33mGripVert
+ical[39m } 
+[36mfrom[39m [32
+m"lucide-react"[39
+m[33m;[39m
+ [90m 10 |[39m 
+[36mimport[39m {
+ [90m 11 |[39m   
+  [33mSheet[39m[
+33m,[39m[0m
+
+Import map: 
+aliased to 
+relative './src/com
+ponents/ui/textarea
+' inside of 
+[project]/
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/builder/forms/Exp
+erienceForm.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component Browser]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/component
+s/builder/forms/Exp
+erienceForm.jsx 
+[Client Component 
+SSR]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component SSR]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/bu
+ilder/forms/Summary
+Form.jsx:7:1
+Module not found: 
+Can't resolve '@/co
+mponents/ui/textare
+a'
+[0m [90m  5 
+|[39m 
+[36mimport[39m { 
+useResume } 
+[36mfrom[39m [32
+m"@/lib/resume-stor
+e"[39m[33m;[39m
+ [90m  6 |[39m 
+[36mimport[39m { 
+[33mLabel[39m } 
+[36mfrom[39m [32
+m"@/components/ui/l
+abel"[39m[33m;[3
+9m
+[31m[1m>[22m[39
+m[90m  7 |[39m 
+[36mimport[39m { 
+[33mTextarea[39m 
+} [36mfrom[39m [
+32m"@/components/ui
+/textarea"[39m[33
+m;[39m
+ [90m    |[39m [
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m
+ [90m  8 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mSummaryForm[3
+9m() {
+ [90m  9 |[39m   
+[36mconst[39m $ 
+[33m=[39m _c([35
+m9[39m)[33m;[39m
+ [90m 10 |[39m   
+[36mconst[39m 
+{[0m
+
+Import map: 
+aliased to 
+relative './src/com
+ponents/ui/textarea
+' inside of 
+[project]/
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/builder/forms/Sum
+maryForm.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component Browser]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/component
+s/builder/forms/Sum
+maryForm.jsx 
+[Client Component 
+SSR]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component SSR]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/bu
+ilder/forms/Summary
+Form.jsx:6:1
+Module not found: 
+Can't resolve '@/co
+mponents/ui/textare
+a'
+[0m [90m 4 
+|[39m 
+[36mimport[39m { 
+useResume } 
+[36mfrom[39m [32
+m"@/lib/resume-stor
+e"[39m[33m;[39m
+ [90m 5 |[39m 
+[36mimport[39m { 
+[33mLabel[39m } 
+[36mfrom[39m [32
+m"@/components/ui/l
+abel"[39m[33m;[3
+9m
+[31m[1m>[22m[39
+m[90m 6 |[39m 
+[36mimport[39m { 
+[33mTextarea[39m 
+} [36mfrom[39m [
+32m"@/components/ui
+/textarea"[39m[33
+m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m
+ [90m 7 |[39m
+ [90m 8 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mSummaryForm[3
+9m() {
+ [90m 9 |[39m    
+ [36mconst[39m { 
+resume[33m,[39m 
+dispatch } 
+[33m=[39m useResu
+me()[33m;[39m[0m
+
+Import map: 
+aliased to 
+relative './src/com
+ponents/ui/textarea
+' inside of 
+[project]/
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/builder/forms/Sum
+maryForm.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component Browser]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Client 
+Component Browser]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/component
+s/builder/forms/Sum
+maryForm.jsx 
+[Client Component 
+SSR]
+    ./src/component
+s/builder/EditorPan
+el.jsx [Client 
+Component SSR]
+    ./src/component
+s/builder/BuilderLa
+yout.jsx [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Client 
+Component SSR]
+    ./src/app/build
+er/page.js [Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+    at <unknown> (.
+/src/components/bui
+lder/forms/SkillsFo
+rm.jsx:12:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/bui
+lder/forms/SkillsFo
+rm.jsx:17:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/bui
+lder/forms/DesignFo
+rm.jsx:7:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/bui
+lder/forms/DesignFo
+rm.jsx:6:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/bui
+lder/forms/DesignFo
+rm.jsx:8:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/bui
+lder/forms/DesignFo
+rm.jsx:7:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/bui
+lder/forms/Educatio
+nForm.jsx:9:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/bui
+lder/forms/Educatio
+nForm.jsx:8:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/bui
+lder/forms/Experien
+ceForm.jsx:9:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/bui
+lder/forms/Experien
+ceForm.jsx:8:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/bui
+lder/forms/SummaryF
+orm.jsx:7:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/bui
+lder/forms/SummaryF
+orm.jsx:6:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
