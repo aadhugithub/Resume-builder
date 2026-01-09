@@ -107,12 +107,24 @@ export default function DesignForm() {
                 <Label className="text-base font-semibold">Section Ordering</Label>
                 <div className="text-xs text-gray-500 mb-2">Drag to reorder sections</div>
                 <Reorder.Group axis="y" values={sectionOrder} onReorder={(newOrder) => updateMeta("sectionOrder", newOrder)} className="space-y-2">
-                    {sectionOrder.map((section) => (
-                        <Reorder.Item key={section} value={section} className="flex items-center gap-3 bg-white p-2 border rounded cursor-move shadow-sm select-none">
-                            <GripVertical className="h-4 w-4 text-gray-400" />
-                            <span className="capitalize text-sm font-medium">{section}</span>
-                        </Reorder.Item>
-                    ))}
+                    {sectionOrder.map((section) => {
+                        // Check if this is a custom section
+                        const isCustom = section.startsWith('custom-');
+                        let displayName = section;
+
+                        if (isCustom) {
+                            const customId = section.replace('custom-', '');
+                            const customSection = resume.custom?.find(item => item.id === customId);
+                            displayName = customSection?.title || 'Custom Section';
+                        }
+
+                        return (
+                            <Reorder.Item key={section} value={section} className="flex items-center gap-3 bg-white p-2 border rounded cursor-move shadow-sm select-none">
+                                <GripVertical className="h-4 w-4 text-gray-400" />
+                                <span className="capitalize text-sm font-medium">{displayName}</span>
+                            </Reorder.Item>
+                        );
+                    })}
                 </Reorder.Group>
             </div>
 

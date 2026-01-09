@@ -11,7 +11,7 @@ const ensureUrl = (url) => {
 };
 
 export default function MinimalTemplate({ resume }) {
-    const { profile, experience, education, skills, summary, projects, certifications } = resume;
+    const { profile, experience, education, skills, summary, projects, certifications, custom } = resume;
 
     const { meta } = resume;
 
@@ -178,6 +178,32 @@ export default function MinimalTemplate({ resume }) {
                     </section>
                 );
             default:
+                // Check if it's a custom section
+                if (section.startsWith('custom-')) {
+                    const customId = section.replace('custom-', '');
+                    const customSection = custom?.find(item => item.id === customId);
+
+                    if (!customSection) return null;
+
+                    return (
+                        <section key={section} className="mb-5">
+                            <h2 className={`${bodyTextSize} font-bold uppercase tracking-widest border-b border-gray-400 mb-3 pb-1`}>
+                                {customSection.title}
+                            </h2>
+                            {customSection.type === 'list' ? (
+                                <ul className={`list-disc pl-5 space-y-1 ${bodyTextSize} text-gray-900`}>
+                                    {customSection.content.split('\n').filter(line => line.trim()).map((line, i) => (
+                                        <li key={i}><RichText text={line} /></li>
+                                    ))}
+                                </ul>
+                            ) : (
+                                <div className={`${bodyTextSize} text-justify leading-relaxed text-gray-900`}>
+                                    <RichText text={customSection.content} />
+                                </div>
+                            )}
+                        </section>
+                    );
+                }
                 return null;
         }
     };

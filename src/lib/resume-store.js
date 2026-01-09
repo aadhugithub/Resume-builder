@@ -50,13 +50,24 @@ function resumeReducer(state, action) {
 
         // Generic list actions
         case "ADD_ITEM":
-            return {
+            const newState = {
                 ...state,
                 [action.section]: [
                     ...state[action.section],
                     { id: uuidv4(), ...action.payload },
                 ],
             };
+
+            // If adding a custom section, add it to sectionOrder
+            if (action.section === 'custom') {
+                const newId = newState.custom[newState.custom.length - 1].id;
+                newState.meta = {
+                    ...state.meta,
+                    sectionOrder: [...state.meta.sectionOrder, `custom-${newId}`]
+                };
+            }
+
+            return newState;
 
         case "UPDATE_ITEM":
             return {
@@ -67,12 +78,24 @@ function resumeReducer(state, action) {
             };
 
         case "DELETE_ITEM":
-            return {
+            const deletedState = {
                 ...state,
                 [action.section]: state[action.section].filter(
                     (item) => item.id !== action.id
                 ),
             };
+
+            // If deleting a custom section, remove it from sectionOrder
+            if (action.section === 'custom') {
+                deletedState.meta = {
+                    ...state.meta,
+                    sectionOrder: state.meta.sectionOrder.filter(
+                        section => section !== `custom-${action.id}`
+                    )
+                };
+            }
+
+            return deletedState;
 
         case "REORDER_ITEMS":
             return {

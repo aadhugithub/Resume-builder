@@ -11,6 +11,7 @@ import EducationForm from "./forms/EducationForm";
 import SkillsForm from "./forms/SkillsForm";
 import ProjectsForm from "./forms/ProjectsForm";
 import CertificationsForm from "./forms/CertificationsForm";
+import CustomSectionsForm from "./forms/CustomSectionsForm";
 import DesignForm from "./forms/DesignForm";
 
 export default function EditorPanel() {
@@ -74,6 +75,13 @@ export default function EditorPanel() {
                                         <AccordionTrigger className="hover:no-underline py-3">Certifications</AccordionTrigger>
                                         <AccordionContent className="pt-2 pb-4">
                                             <CertificationsForm />
+                                        </AccordionContent>
+                                    </AccordionItem>
+
+                                    <AccordionItem value="custom" className="border rounded-lg px-4 data-[state=open]:bg-gray-50/50">
+                                        <AccordionTrigger className="hover:no-underline py-3">Custom Sections</AccordionTrigger>
+                                        <AccordionContent className="pt-2 pb-4">
+                                            <CustomSectionsForm />
                                         </AccordionContent>
                                     </AccordionItem>
 
