@@ -6,7 +6,9 @@ import MinimalTemplate from "./templates/MinimalTemplate";
 // Import other templates later
 
 const ResumePreview = forwardRef((props, ref) => {
-    const { resume } = useResume();
+    const { resume: contextResume } = useResume();
+    // Allow passing resume as prop (for AI optimizer) or use context (for builder)
+    const resume = props.resume || contextResume;
     const { meta } = resume;
 
     // Font Map
@@ -28,7 +30,7 @@ const ResumePreview = forwardRef((props, ref) => {
             ref={ref}
             id="resume-preview-content"
             className={`bg-white shadow-xl mx-auto origin-top transition-all duration-200
-            ${fontMap[meta.fontFamily] || "font-sans"}
+            ${fontMap[meta?.fontFamily] || "font-sans"}
         `}
             style={{
                 width: "210mm",
@@ -37,7 +39,7 @@ const ResumePreview = forwardRef((props, ref) => {
             }}
         >
             {/* Template Switcher Logic */}
-            {meta.templateId === "minimal" ? (
+            {meta?.templateId === "minimal" ? (
                 <MinimalTemplate resume={resume} />
             ) : (
                 // Fallback to Minimal for now
