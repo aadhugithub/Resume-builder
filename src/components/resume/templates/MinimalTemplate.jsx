@@ -164,7 +164,7 @@ export default function MinimalTemplate({ resume }) {
                                     )}
 
                                     {item.description && (
-                                        <div className="text-sm text-gray-900 pl-4">
+                                        <div className="text-sm text-gray-900 pl-4 mb-2">
                                             <ul className="list-disc space-y-1">
                                                 {item.description.split('\n').filter(line => line.trim()).map((line, i) => (
                                                     <li key={i}><RichText text={line.replace(/^•\s*/, '')} /></li>
@@ -172,6 +172,9 @@ export default function MinimalTemplate({ resume }) {
                                             </ul>
                                         </div>
                                     )}
+
+                                    {item.tool && <p className="text-xs text-gray-600"><span className="font-semibold">Tool:</span> {item.tool}</p>}
+                                    {item.tech && <p className="text-xs text-gray-600"><span className="font-semibold">Tech:</span> {item.tech}</p>}
                                 </div>
                             ))}
                         </div>
@@ -251,6 +254,12 @@ export default function MinimalTemplate({ resume }) {
                         <>
                             <span>|</span>
                             <a href={ensureUrl(profile.website)} className="text-purple-700 font-bold hover:underline" target="_blank" rel="noreferrer">Portfolio</a>
+                        </>
+                    )}
+                    {profile.github && (
+                        <>
+                            <span>|</span>
+                            <a href={ensureUrl(profile.github)} className="text-purple-700 font-bold hover:underline" target="_blank" rel="noreferrer">GitHub</a>
                         </>
                     )}
                 </div>

@@ -55,7 +55,8 @@ export default function BackgroundInput() {
             });
 
             if (!response.ok) {
-                throw new Error("Failed to parse resume");
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.error || "Failed to parse resume");
             }
 
             const { parsedData } = await response.json();

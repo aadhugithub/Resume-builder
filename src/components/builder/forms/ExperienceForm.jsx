@@ -28,7 +28,7 @@ export default function ExperienceForm() {
 
     const handleAdd = () => {
         setEditingItem({
-            role: "", company: "", location: "", startDate: "", endDate: "", current: false, description: ""
+            role: "", company: "", location: "", startDate: "", endDate: "", current: false, description: "", tool: "", tech: ""
         });
         setIsSheetOpen(true);
     };
@@ -144,7 +144,7 @@ export default function ExperienceForm() {
                             {/* Description Box */}
                             <div className="p-4 border rounded-lg bg-gray-50/50 space-y-4">
                                 <h4 className="text-xs font-semibold uppercase text-gray-500 tracking-wider mb-2">Details</h4>
-                                <div className="space-y-2">
+                                <div className="space-y-2 pt-2">
                                     <Label>Description</Label>
                                     <Textarea
                                         value={editingItem.description}
@@ -155,6 +155,17 @@ export default function ExperienceForm() {
                                     <p className="text-xs text-gray-400">
                                         Tip: Use <b>**text**</b> for bold and <b>[text](url)</b> for links.
                                     </p>
+                                </div>
+
+                                <div className="grid grid-cols-2 gap-4 pt-2">
+                                    <div className="space-y-2">
+                                        <Label>Tool</Label>
+                                        <Input value={editingItem.tool || ""} onChange={e => setEditingItem({ ...editingItem, tool: e.target.value })} placeholder="e.g. Jira" className="bg-white" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <Label>Tech</Label>
+                                        <Input value={editingItem.tech || ""} onChange={e => setEditingItem({ ...editingItem, tech: e.target.value })} placeholder="e.g. React" className="bg-white" />
+                                    </div>
                                 </div>
 
                                 <div className="grid grid-cols-2 gap-4 pt-2">

@@ -95,6 +95,16 @@ export default function ProfileForm() {
                         placeholder="linkedin.com/in/johndoe"
                     />
                 </div>
+                <div className="space-y-2">
+                    <Label htmlFor="github">GitHub (Optional)</Label>
+                    <Input
+                        id="github"
+                        name="github"
+                        value={profile.github || ""}
+                        onChange={handleChange}
+                        placeholder="github.com/johndoe"
+                    />
+                </div>
             </div>
         </div>
     );

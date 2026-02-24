@@ -16,7 +16,11 @@ export async function extractTextFromPDF(file) {
         // For browser environment, we'll use a simpler approach
         // pdf-parse works in Node.js, so we'll use PDF.js instead
         // Import dynamically to avoid SSR issues
-        const pdfjsLib = await import('pdfjs-dist/webpack');
+        const pdfjsLib = await import('pdfjs-dist');
+        // Set worker via CDN to avoid turbopack/webpack worker issues
+        if (!pdfjsLib.GlobalWorkerOptions.workerSrc) {
+            pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`;
+        }
 
         const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
         let fullText = '';

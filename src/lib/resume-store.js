@@ -22,9 +22,10 @@ const initialState = {
         location: "",
         website: "",
         linkedin: "",
+        github: "",
     },
     summary: "",
-    experience: [], // { id, role, company, location, startDate, endDate, current, description }
+    experience: [], // { id, role, company, location, startDate, endDate, current, description, tool, tech }
     education: [], // { id, degree, school, location, startDate, endDate, current, description }
     projects: [], // { id, name, link, tech, description }
     skills: [], // { id, category, items }

@@ -31,6 +31,7 @@ Return a JSON object with this exact structure:
     "phone": "+1234567890",
     "location": "City, State",
     "linkedin": "linkedin.com/in/username",
+    "github": "github.com/username",
     "website": "portfolio.com"
   },
   "summary": "2-3 sentence professional summary tailored to the job, highlighting key qualifications and value proposition",
@@ -43,6 +44,8 @@ Return a JSON object with this exact structure:
       "endDate": "Month Year or Present",
       "current": false,
       "description": "• Achievement with quantified result\\n• Another achievement using job keywords\\n• Third achievement showing impact",
+      "tool": "Tool1, Tool2",
+      "tech": "Tech1, Tech2, Tech3",
       "matchScore": 95
     }
   ],
@@ -130,6 +133,7 @@ Return a JSON object matching this structure:
   "phone": "+1234567890",
   "location": "City, State",
   "linkedin": "linkedin url",
+  "github": "github url",
   "website": "website url",
   "summary": "Professional summary if present",
   "experience": [
@@ -138,7 +142,9 @@ Return a JSON object matching this structure:
       "company": "Company",
       "startDate": "Month Year",
       "endDate": "Month Year or Present",
-      "description": "Bullet points of achievements"
+      "description": "Bullet points of achievements",
+      "tool": "Comma separated tools used",
+      "tech": "Comma separated technologies used"
     }
   ],
   "education": [
