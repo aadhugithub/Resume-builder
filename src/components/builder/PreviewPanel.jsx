@@ -1,17 +1,22 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ZoomIn, ZoomOut, Download, FileJson } from "lucide-react";
+import { ZoomIn, ZoomOut, Download, FileJson, Maximize2 } from "lucide-react";
 import ResumePreview from "@/components/resume/ResumePreview";
 import { useReactToPrint } from "react-to-print";
 import { useResume } from "@/lib/resume-store";
 import { toast } from "sonner";
 
-export default function PreviewPanel() {
-    const [scale, setScale] = useState(0.8);
+export default function PreviewPanel({ isSavedView = false, overrideResume = null }) {
+    const [scale, setScale] = useState(0.85);
     const componentRef = useRef(null);
-    const { resume, dispatch } = useResume();
+    const { resume: activeResume } = useResume();
+    const resume = overrideResume || activeResume;
+
+    useEffect(() => {
+        if (isSavedView) setScale(1.1);
+    }, [isSavedView]);
 
     const handlePrint = useReactToPrint({
         contentRef: componentRef,
@@ -28,8 +33,9 @@ export default function PreviewPanel() {
           }
         `,
         onAfterPrint: () => {
-            dispatch({ type: "RESET_RESUME" });
-            toast.success("Resume exported and builder reset!");
+            // Note: In a real app, you might not want to reset here if they just want to print
+            // dispatch({ type: "RESET_RESUME" });
+            toast.success("Resume exported successfully!");
         },
     });
 
@@ -37,44 +43,73 @@ export default function PreviewPanel() {
         const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(resume, null, 2));
         const downloadAnchorNode = document.createElement('a');
         downloadAnchorNode.setAttribute("href", dataStr);
-        downloadAnchorNode.setAttribute("download", "resume.json");
-        document.body.appendChild(downloadAnchorNode); // required for firefox
+        downloadAnchorNode.setAttribute("download", `${resume.profile.name || "resume"}.json`);
+        document.body.appendChild(downloadAnchorNode);
         downloadAnchorNode.click();
         downloadAnchorNode.remove();
-        toast.success("JSON exported!");
+        toast.success("Resume data exported as JSON");
     }
 
     return (
-        <div className="flex flex-col h-full gap-4">
+        <div className={`flex flex-col h-full ${isSavedView ? "gap-0" : "gap-4"}`}>
             {/* Toolbar */}
-            <div className="flex items-center justify-between bg-white p-2 rounded-lg shadow-sm border shrink-0">
-                <div className="flex items-center gap-1">
-                    <Button variant="ghost" size="icon" onClick={() => setScale(s => Math.max(0.4, s - 0.1))}>
-                        <ZoomOut className="h-4 w-4" />
-                    </Button>
-                    <span className="text-xs w-12 text-center">{Math.round(scale * 100)}%</span>
-                    <Button variant="ghost" size="icon" onClick={() => setScale(s => Math.min(1.5, s + 0.1))}>
-                        <ZoomIn className="h-4 w-4" />
-                    </Button>
-                </div>
+            <div className={`flex items-center justify-between bg-white px-4 py-3 shrink-0 ${isSavedView ? "border-b" : "rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] border"}`}>
                 <div className="flex items-center gap-2">
-                    <Button size="sm" variant="outline" className="gap-2 hidden md:flex" onClick={exportJson}>
-                        <FileJson className="h-4 w-4" /> JSON
+                    <div className="flex items-center bg-gray-50 rounded-lg p-0.5 border border-gray-100">
+                        <Button 
+                            variant="ghost" 
+                            size="icon" 
+                            className="h-8 w-8 rounded-md" 
+                            onClick={() => setScale(s => Math.max(0.4, s - 0.1))}
+                        >
+                            <ZoomOut className="h-4 w-4" />
+                        </Button>
+                        <div className="text-[10px] font-bold w-10 text-center text-gray-600 uppercase tracking-tighter">
+                            {Math.round(scale * 100)}%
+                        </div>
+                        <Button 
+                            variant="ghost" 
+                            size="icon" 
+                            className="h-8 w-8 rounded-md" 
+                            onClick={() => setScale(s => Math.min(1.5, s + 0.1))}
+                        >
+                            <ZoomIn className="h-4 w-4" />
+                        </Button>
+                    </div>
+                </div>
+                
+                <div className="flex items-center gap-2">
+                    <Button 
+                        size="sm" 
+                        variant="ghost" 
+                        className="gap-2 text-gray-600 font-semibold hover:bg-gray-50" 
+                        onClick={exportJson}
+                    >
+                        <FileJson className="h-4 w-4" />
+                        <span className="hidden sm:inline text-xs">JSON</span>
                     </Button>
-                    <Button size="sm" className="gap-2" onClick={handlePrint}>
-                        <Download className="h-4 w-4" /> Export PDF
+                    <Button 
+                        size="sm" 
+                        className="gap-2 bg-black hover:bg-gray-800 text-white font-bold rounded-lg px-5 shadow-lg shadow-black/5" 
+                        onClick={handlePrint}
+                    >
+                        <Download className="h-4 w-4" />
+                        <span className="text-xs">Export PDF</span>
                     </Button>
                 </div>
             </div>
 
             {/* Preview Area */}
-            <div className="flex-1 overflow-auto flex justify-center p-4 bg-gray-100/50 rounded-xl relative">
+            <div className={`flex-1 overflow-auto flex justify-center p-8 lg:p-12 transition-colors ${isSavedView ? "bg-transparent" : "bg-gray-50/50 rounded-2xl"}`}>
                 <div
-                    className="origin-top transition-transform duration-200 shadow-2xl"
-                    style={{ transform: `scale(${scale})` }}
+                    className="origin-top transition-all duration-300 ease-out"
+                    style={{ 
+                        transform: `scale(${scale})`,
+                        filter: "drop-shadow(0 25px 50px -12px rgba(0, 0, 0, 0.15))"
+                    }}
                 >
-                    <div ref={componentRef}>
-                        <ResumePreview />
+                    <div ref={componentRef} className="bg-white">
+                        <ResumePreview resume={resume} />
                     </div>
                 </div>
             </div>

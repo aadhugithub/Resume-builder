@@ -25,87 +25,126 @@ const initialState = {
         github: "",
     },
     summary: "",
-    experience: [], // { id, role, company, location, startDate, endDate, current, description, tool, tech }
-    education: [], // { id, degree, school, location, startDate, endDate, current, description }
-    projects: [], // { id, name, link, tech, description }
-    skills: [], // { id, category, items }
-    certifications: [], // { id, name, issuer, date }
-    awards: [], // { id, name, issuer, date }
-    custom: [], // Custom sections
+    experience: [],
+    education: [],
+    projects: [],
+    skills: [],
+    certifications: [],
+    awards: [],
+    custom: [],
+};
+
+const initialGlobalState = {
+    activeResume: initialState,
+    allResumes: [], // { id, name, date, time, type: 'created' | 'uploaded', data }
 };
 
 // Reducer
 function resumeReducer(state, action) {
     switch (action.type) {
-        case "LOAD_DATA":
-            return { ...state, ...action.payload };
+        case "LOAD_ALL_DATA":
+            return { ...state, allResumes: action.payload };
+
+        case "LOAD_ACTIVE_DATA":
+            return { ...state, activeResume: { ...state.activeResume, ...action.payload } };
 
         case "UPDATE_META":
-            return { ...state, meta: { ...state.meta, ...action.payload } };
+            return { ...state, activeResume: { ...state.activeResume, meta: { ...state.activeResume.meta, ...action.payload } } };
 
         case "UPDATE_PROFILE":
-            return { ...state, profile: { ...state.profile, ...action.payload } };
+            return { ...state, activeResume: { ...state.activeResume, profile: { ...state.activeResume.profile, ...action.payload } } };
 
         case "UPDATE_SUMMARY":
-            return { ...state, summary: action.payload };
+            return { ...state, activeResume: { ...state.activeResume, summary: action.payload } };
 
-        // Generic list actions
         case "ADD_ITEM":
-            const newState = {
-                ...state,
+            const newStateWithItem = {
+                ...state.activeResume,
                 [action.section]: [
-                    ...state[action.section],
+                    ...state.activeResume[action.section],
                     { id: uuidv4(), ...action.payload },
                 ],
             };
-
-            // If adding a custom section, add it to sectionOrder
             if (action.section === 'custom') {
-                const newId = newState.custom[newState.custom.length - 1].id;
-                newState.meta = {
-                    ...state.meta,
-                    sectionOrder: [...state.meta.sectionOrder, `custom-${newId}`]
+                const newId = newStateWithItem.custom[newStateWithItem.custom.length - 1].id;
+                newStateWithItem.meta = {
+                    ...newStateWithItem.meta,
+                    sectionOrder: [...newStateWithItem.meta.sectionOrder, `custom-${newId}`]
                 };
             }
-
-            return newState;
+            return { ...state, activeResume: newStateWithItem };
 
         case "UPDATE_ITEM":
             return {
                 ...state,
-                [action.section]: state[action.section].map((item) =>
-                    item.id === action.id ? { ...item, ...action.payload } : item
-                ),
+                activeResume: {
+                    ...state.activeResume,
+                    [action.section]: state.activeResume[action.section].map((item) =>
+                        item.id === action.id ? { ...item, ...action.payload } : item
+                    ),
+                }
             };
 
         case "DELETE_ITEM":
             const deletedState = {
-                ...state,
-                [action.section]: state[action.section].filter(
+                ...state.activeResume,
+                [action.section]: state.activeResume[action.section].filter(
                     (item) => item.id !== action.id
                 ),
             };
-
-            // If deleting a custom section, remove it from sectionOrder
             if (action.section === 'custom') {
                 deletedState.meta = {
-                    ...state.meta,
-                    sectionOrder: state.meta.sectionOrder.filter(
+                    ...deletedState.meta,
+                    sectionOrder: deletedState.meta.sectionOrder.filter(
                         section => section !== `custom-${action.id}`
                     )
                 };
             }
-
-            return deletedState;
+            return { ...state, activeResume: deletedState };
 
         case "REORDER_ITEMS":
             return {
                 ...state,
-                [action.section]: action.payload, // Expects reordered array
+                activeResume: {
+                    ...state.activeResume,
+                    [action.section]: action.payload,
+                }
             };
 
         case "RESET_RESUME":
-            return initialState;
+            return { ...state, activeResume: initialState };
+
+        case "SAVE_CURRENT_RESUME": {
+            const now = new Date();
+            const newSaved = {
+                id: uuidv4(),
+                name: state.activeResume.profile.name || "Untitled Resume",
+                date: now.toLocaleDateString(),
+                time: now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                type: 'created',
+                data: JSON.parse(JSON.stringify(state.activeResume))
+            };
+            return { ...state, allResumes: [...state.allResumes, newSaved] };
+        }
+
+        case "UPLOAD_RESUME": {
+            const now = new Date();
+            const newUploaded = {
+                id: uuidv4(),
+                name: action.payload.name || "Uploaded Resume",
+                date: now.toLocaleDateString(),
+                time: now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                type: 'uploaded',
+                data: action.payload.data
+            };
+            return { ...state, allResumes: [...state.allResumes, newUploaded] };
+        }
+
+        case "DELETE_SAVED_RESUME":
+            return { ...state, allResumes: state.allResumes.filter(r => r.id !== action.id) };
+
+        case "SET_ACTIVE_RESUME":
+            return { ...state, activeResume: action.payload };
 
         default:
             return state;
@@ -113,15 +152,20 @@ function resumeReducer(state, action) {
 }
 
 export function ResumeProvider({ children }) {
-    const [state, dispatch] = useReducer(resumeReducer, initialState);
+    const [state, dispatch] = useReducer(resumeReducer, initialGlobalState);
     const [isLoaded, setIsLoaded] = React.useState(false);
 
     // Load from local storage on mount
     useEffect(() => {
         try {
-            const saved = localStorage.getItem("resume-data");
-            if (saved) {
-                dispatch({ type: "LOAD_DATA", payload: JSON.parse(saved) });
+            const activeSaved = localStorage.getItem("resume-data");
+            const allSaved = localStorage.getItem("all-resumes-data");
+            
+            if (activeSaved) {
+                dispatch({ type: "LOAD_ACTIVE_DATA", payload: JSON.parse(activeSaved) });
+            }
+            if (allSaved) {
+                dispatch({ type: "LOAD_ALL_DATA", payload: JSON.parse(allSaved) });
             }
         } catch (e) {
             console.error("Failed to load resume data", e);
@@ -134,7 +178,8 @@ export function ResumeProvider({ children }) {
     useEffect(() => {
         if (isLoaded) {
             try {
-                localStorage.setItem("resume-data", JSON.stringify(state));
+                localStorage.setItem("resume-data", JSON.stringify(state.activeResume));
+                localStorage.setItem("all-resumes-data", JSON.stringify(state.allResumes));
             } catch (e) {
                 console.error("Failed to save resume data", e);
             }
@@ -142,7 +187,7 @@ export function ResumeProvider({ children }) {
     }, [state, isLoaded]);
 
     return (
-        <ResumeContext.Provider value={{ resume: state, dispatch, isLoaded }}>
+        <ResumeContext.Provider value={{ resume: state.activeResume, allResumes: state.allResumes, dispatch, isLoaded }}>
             {children}
         </ResumeContext.Provider>
     );

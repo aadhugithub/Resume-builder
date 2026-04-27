@@ -1,94 +1,126 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Star } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section className="relative overflow-hidden pt-16 pb-24 lg:pt-32 lg:pb-40">
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
-                    <div className="flex-1 text-center lg:text-left space-y-8">
+        <section className="relative overflow-hidden pt-20 pb-32 lg:pt-36 lg:pb-48">
+            {/* Background decorative elements */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 overflow-hidden">
+                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-50/50 rounded-full blur-[120px]" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-50/50 rounded-full blur-[120px]" />
+            </div>
+
+            <div className="container mx-auto px-6 md:px-8">
+                <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                    <div className="flex-1 text-center lg:text-left space-y-10">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/5 text-sm font-medium text-black/60"
+                        >
+                            <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+                            Trusted by 10,000+ job seekers
+                        </motion.div>
+
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
-                            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900"
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                            className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-black leading-[1.1]"
                         >
-                            Build a premium resume <br className="hidden lg:block" />
-                            <span className="text-gray-500">in minutes.</span>
+                            Elevate your <br className="hidden lg:block" />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-400">
+                                career path.
+                            </span>
                         </motion.h1>
 
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.3 }}
-                            className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light"
                         >
-                            The professional resume builder that values your privacy.
-                            Clean, ATS-friendly templates, entirely free, and runs in your browser.
+                            Create a professional, ATS-optimized resume in minutes. 
+                            No subscriptions, no hidden fees, just your next big opportunity.
                         </motion.p>
 
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6"
                         >
                             <Link href="/builder">
-                                <Button size="lg" className="h-14 px-8 rounded-full text-lg gap-2 shadow-lg shadow-black/5 hover:shadow-xl transition-all">
-                                    Create Resume Now <ArrowRight className="h-5 w-5" />
+                                <Button size="lg" className="h-16 px-10 rounded-2xl text-xl font-semibold gap-3 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)] hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] transition-all bg-black hover:bg-gray-800 scale-100 hover:scale-105">
+                                    Build My Resume <ArrowRight className="h-6 w-6" />
                                 </Button>
                             </Link>
-                            <p className="text-sm text-gray-500 flex items-center gap-2">
-                                <CheckCircle2 className="h-4 w-4 text-green-500" /> No signup required
-                            </p>
+                            <div className="flex flex-col items-start gap-1">
+                                <div className="flex items-center gap-1">
+                                    {[1, 2, 3, 4, 5].map((s) => (
+                                        <Star key={s} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                                    ))}
+                                </div>
+                                <p className="text-sm text-gray-600 font-medium">
+                                    Rated 4.9/5 by industry experts
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1, delay: 0.5 }}
+                            className="pt-8 flex flex-wrap justify-center lg:justify-start gap-x-12 gap-y-6 opacity-40 grayscale"
+                        >
+                            {/* Placeholder for "Featured in" logos */}
+                            <span className="text-lg font-bold tracking-widest uppercase">Forbes</span>
+                            <span className="text-lg font-bold tracking-widest uppercase">TechCrunch</span>
+                            <span className="text-lg font-bold tracking-widest uppercase">Wired</span>
+                            <span className="text-lg font-bold tracking-widest uppercase">Verge</span>
                         </motion.div>
                     </div>
 
                     <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.5, type: "spring" }}
-                        className="flex-1 relative w-full max-w-xl lg:max-w-none"
+                        initial={{ opacity: 0, scale: 0.9, rotateY: 10 }}
+                        animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+                        transition={{ duration: 1, delay: 0.2, type: "spring" }}
+                        className="flex-1 relative w-full perspective-1000"
                     >
-                        {/* Abstract UI representation */}
-                        <div className="relative z-10 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden aspect-[3/4] md:aspect-[4/3] transform rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
-                            <div className="h-8 bg-gray-50 border-b border-gray-100 flex items-center gap-2 px-4">
-                                <div className="w-3 h-3 rounded-full bg-red-400" />
-                                <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                                <div className="w-3 h-3 rounded-full bg-green-400" />
+                        <div className="relative z-10 bg-white p-2 rounded-[2rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.25)] border border-gray-100 transform rotate-1 hover:rotate-0 transition-transform duration-700 overflow-hidden">
+                            <div className="rounded-[1.5rem] overflow-hidden">
+                                <Image 
+                                    src="/Resume-builder/premium_resume_preview_1777140828005.png" 
+                                    alt="Resume Preview" 
+                                    width={800} 
+                                    height={1000} 
+                                    className="w-full h-auto"
+                                    priority
+                                />
                             </div>
-                            <div className="p-6 md:p-8 space-y-6">
-                                {/* Mock content */}
-                                <div className="flex gap-6">
-                                    <div className="w-1/3 space-y-4">
-                                        <div className="h-32 bg-gray-100 rounded-lg animate-pulse" />
-                                        <div className="h-8 bg-gray-100 rounded-md w-3/4" />
-                                        <div className="h-4 bg-gray-50 rounded-md w-full" />
-                                        <div className="h-4 bg-gray-50 rounded-md w-5/6" />
+                            
+                            {/* Floating decorative card */}
+                            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 hidden md:block animate-bounce-slow">
+                                <div className="flex items-center gap-3">
+                                    <div className="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center">
+                                        <CheckCircle2 className="h-6 w-6 text-green-600" />
                                     </div>
-                                    <div className="flex-1 space-y-4">
-                                        <div className="h-10 bg-gray-100 rounded-lg w-1/2" />
-                                        <div className="space-y-2">
-                                            <div className="h-4 bg-gray-50 rounded w-full" />
-                                            <div className="h-4 bg-gray-50 rounded w-full" />
-                                            <div className="h-4 bg-gray-50 rounded w-5/6" />
-                                        </div>
-                                        <div className="space-y-2 pt-4">
-                                            <div className="h-4 bg-gray-50 rounded w-full" />
-                                            <div className="h-4 bg-gray-50 rounded w-full" />
-                                            <div className="h-4 bg-gray-50 rounded w-5/6" />
-                                        </div>
+                                    <div>
+                                        <p className="text-sm font-bold">ATS Optimized</p>
+                                        <p className="text-xs text-gray-600">100% Score</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Background blobs */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-blue-100 via-purple-100 to-pink-100 rounded-full blur-3xl -z-10 opacity-60" />
+                        {/* Background glow */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-gradient-to-tr from-blue-200 via-indigo-100 to-purple-200 rounded-full blur-[100px] -z-10 opacity-30" />
                     </motion.div>
                 </div>
             </div>
