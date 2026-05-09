@@ -45,17 +45,17 @@ export const RichTextarea = React.forwardRef(({ className, value, onChange, ...p
     return (
         <div className={cn("flex flex-col border rounded-md shadow-sm bg-white overflow-hidden focus-within:ring-[3px] focus-within:ring-ring/50 focus-within:border-ring transition-[color,box-shadow]", className)}>
             <div className="flex items-center gap-1 border-b p-1 bg-gray-50/80">
-                <Button variant="ghost" size="icon" className="h-7 w-7 text-gray-600 hover:text-gray-900 rounded-sm" onClick={(e) => handleAction(e, "bold")} title="Bold">
+                <Button type="button" variant="ghost" size="icon" className="h-7 w-7 text-gray-600 hover:text-gray-900 rounded-sm" onClick={(e) => handleAction(e, "bold")} title="Bold">
                     <Bold className="h-3.5 w-3.5" />
                 </Button>
-                <Button variant="ghost" size="icon" className="h-7 w-7 text-gray-600 hover:text-gray-900 rounded-sm" onClick={(e) => handleAction(e, "italic")} title="Italic">
+                <Button type="button" variant="ghost" size="icon" className="h-7 w-7 text-gray-600 hover:text-gray-900 rounded-sm" onClick={(e) => handleAction(e, "italic")} title="Italic">
                     <Italic className="h-3.5 w-3.5" />
                 </Button>
-                <Button variant="ghost" size="icon" className="h-7 w-7 text-gray-600 hover:text-gray-900 rounded-sm" onClick={(e) => handleAction(e, "link")} title="Link">
+                <Button type="button" variant="ghost" size="icon" className="h-7 w-7 text-gray-600 hover:text-gray-900 rounded-sm" onClick={(e) => handleAction(e, "link")} title="Link">
                     <LinkIcon className="h-3.5 w-3.5" />
                 </Button>
                 <div className="w-[1px] h-4 bg-gray-300 mx-1"></div>
-                <Button variant="ghost" size="icon" className="h-7 w-7 text-gray-600 hover:text-gray-900 rounded-sm" onClick={(e) => handleAction(e, "list")} title="Bullet List">
+                <Button type="button" variant="ghost" size="icon" className="h-7 w-7 text-gray-600 hover:text-gray-900 rounded-sm" onClick={(e) => handleAction(e, "list")} title="Bullet List">
                     <List className="h-3.5 w-3.5" />
                 </Button>
             </div>
