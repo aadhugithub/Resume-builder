@@ -13,7 +13,7 @@ export async function extractKeywords(jobDescription) {
         throw new Error("Gemini API Key is missing. Please add NEXT_PUBLIC_GEMINI_API_KEY to your .env file.");
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
     const prompt = `Extract the most important keywords from the following job description.
 Return only a clean list of:
@@ -56,7 +56,7 @@ export async function optimizeResume(jobDescription, resumeData) {
     }
 
     const model = genAI.getGenerativeModel({ 
-        model: "gemini-1.5-flash",
+        model: "gemini-2.0-flash",
         generationConfig: { responseMimeType: "application/json" }
     });
 
@@ -108,7 +108,7 @@ export async function parseResumeFromFile(rawText) {
     }
 
     const model = genAI.getGenerativeModel({ 
-        model: "gemini-1.5-flash",
+        model: "gemini-2.0-flash",
         generationConfig: { responseMimeType: "application/json" }
     });
 

@@ -5,7 +5,7 @@ import { useResume } from "@/lib/resume-store";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { RichTextarea } from "@/components/ui/rich-textarea";
 import { Plus, Pencil, Trash2, GripVertical } from "lucide-react";
 import {
     Dialog,
@@ -161,7 +161,7 @@ export default function CustomSectionsForm() {
                                         </span>
                                     )}
                                 </Label>
-                                <Textarea
+                                <RichTextarea
                                     value={editingItem.content}
                                     onChange={e => setEditingItem({ ...editingItem, content: e.target.value })}
                                     placeholder={
@@ -169,8 +169,7 @@ export default function CustomSectionsForm() {
                                             ? "Enter each item on a new line...\nItem 1\nItem 2\nItem 3"
                                             : "Enter your content here..."
                                     }
-                                    rows={8}
-                                    className="resize-none"
+                                    className="min-h-[160px] resize-none"
                                 />
                             </div>
                         </div>

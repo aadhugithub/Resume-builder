@@ -58,7 +58,7 @@ export async function POST(request) {
             );
         }
 
-        const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
         if (action === "optimize") {
             // Optimize resume based on background and job requirements

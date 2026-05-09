@@ -5,7 +5,7 @@ import { useResume } from "@/lib/resume-store";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { RichTextarea } from "@/components/ui/rich-textarea";
 import { Plus, Pencil, Trash2, GripVertical } from "lucide-react";
 import {
     Sheet,
@@ -115,7 +115,7 @@ export default function ProjectsForm() {
 
                             <div className="space-y-2">
                                 <Label>Description</Label>
-                                <Textarea
+                                <RichTextarea
                                     value={editingItem.description}
                                     onChange={e => setEditingItem({ ...editingItem, description: e.target.value })}
                                     className="h-32"

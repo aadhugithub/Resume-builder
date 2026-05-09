@@ -3,7 +3,7 @@
 import React from "react";
 import { useResume } from "@/lib/resume-store";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { RichTextarea } from "@/components/ui/rich-textarea";
 
 export default function SummaryForm() {
     const { resume, dispatch } = useResume();
@@ -19,7 +19,7 @@ export default function SummaryForm() {
         <div className="space-y-4">
             <div className="space-y-2">
                 <Label htmlFor="summary">Professional Summary</Label>
-                <Textarea
+                <RichTextarea
                     id="summary"
                     value={resume.summary || ""}
                     onChange={handleChange}
