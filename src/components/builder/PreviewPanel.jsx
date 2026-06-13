@@ -27,15 +27,22 @@ export default function PreviewPanel({ isSavedView = false, overrideResume = nul
             margin: 0mm;
           }
           @media print {
-            body {
-              -webkit-print-color-adjust: exact;
+            html, body {
               background: white !important;
-            }
-            #resume-preview-content {
-              box-shadow: none !important;
-              border: none !important;
               margin: 0 !important;
               padding: 0 !important;
+              -webkit-print-color-adjust: exact !important;
+              print-color-adjust: exact !important;
+            }
+            * {
+              box-shadow: none !important;
+              filter: none !important;
+              outline: none !important;
+            }
+            #resume-preview-content {
+              margin: 0 !important;
+              padding: 0 !important;
+              width: 100% !important;
             }
           }
         `,
