@@ -23,12 +23,19 @@ export default function PreviewPanel({ isSavedView = false, overrideResume = nul
         documentTitle: `${resume.profile.name || "Resume"} - Resume`,
         pageStyle: `
           @page {
-            size: auto;
+            size: A4;
             margin: 0mm;
           }
           @media print {
             body {
               -webkit-print-color-adjust: exact;
+              background: white !important;
+            }
+            #resume-preview-content {
+              box-shadow: none !important;
+              border: none !important;
+              margin: 0 !important;
+              padding: 0 !important;
             }
           }
         `,
