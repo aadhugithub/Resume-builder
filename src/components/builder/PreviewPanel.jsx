@@ -115,7 +115,7 @@ export default function PreviewPanel({ isSavedView = false, overrideResume = nul
                         filter: "drop-shadow(0 25px 50px -12px rgba(0, 0, 0, 0.15))"
                     }}
                 >
-                    <div ref={componentRef} className="bg-white print:shadow-none print:border-none print:m-0 print:p-0">
+                    <div ref={componentRef} className="bg-white print:!shadow-none print:!border-none print:!m-0 print:!p-0">
                         <ResumePreview resume={resume} />
                     </div>
                 </div>

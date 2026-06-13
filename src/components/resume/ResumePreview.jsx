@@ -29,7 +29,7 @@ const ResumePreview = forwardRef((props, ref) => {
         <div
             ref={ref}
             id="resume-preview-content"
-            className={`bg-white shadow-xl print:shadow-none print:border-none print:mx-0 print:my-0 mx-auto origin-top transition-all duration-200
+            className={`bg-white shadow-xl print:!shadow-none print:!border-none print:!mx-0 print:!my-0 mx-auto origin-top transition-all duration-200
             ${fontMap[meta?.fontFamily] || "font-sans"}
         `}
             style={{

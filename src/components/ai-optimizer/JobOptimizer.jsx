@@ -265,7 +265,7 @@ export default function JobOptimizer() {
                 <div className="flex-1 overflow-auto p-8 lg:p-12 flex justify-center bg-gray-50/30">
                     <div className="w-full max-w-4xl shadow-2xl bg-white rounded-lg overflow-hidden origin-top scale-[0.85] lg:scale-[0.95] xl:scale-100 transition-transform duration-500">
                         {optimizedResume ? (
-                            <div ref={componentRef} className="bg-white print:shadow-none print:border-none print:m-0 print:p-0">
+                            <div ref={componentRef} className="bg-white print:!shadow-none print:!border-none print:!m-0 print:!p-0">
                                 <ResumePreview resume={optimizedResume} />
                             </div>
                         ) : (
